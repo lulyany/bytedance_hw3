@@ -1,55 +1,60 @@
 import { Switch, Route } from '@modern-js/runtime/router';
 
-import './App.css';
+import './MVC.css';
+
+import React from 'react';
+import { Input,Button,List } from "antd";
+// import TodoList from './TodoList';
 
 const App = () => (
-  <Switch>
-    <Route exact={true} path="/">
-      <div className="container">
-        <main>
-          <div className="logo">
-            <img
-              src="https://lf3-static.bytednsdoc.com/obj/eden-cn/ylaelkeh7nuhfnuhf/modernjs-cover.png"
-              width="300"
-              alt="Modern.js Logo"
-            />
-          </div>
-          <p className="description">
-            Get started by editing <code className="code">src/App.jsx</code>
-          </p>
-          <div className="grid">
-            <a href="https://modernjs.dev/docs/start" className="card">
-              <h2>Quick Start</h2>
-            </a>
-            <a href="https://modernjs.dev/docs/guides" className="card">
-              <h2>Handbook</h2>
-            </a>
-            <a href="https://modernjs.dev/docs/apis" className="card">
-              <h2>API Reference </h2>
-            </a>
-            <a
-              href="https://modernjs.dev/coming-soon"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="card">
-              <h2>Community </h2>
-            </a>
-          </div>
-        </main>
-        <footer className="footer">
-          <a
-            href="https://modernjs.dev"
-            target="_blank"
-            rel="noopener noreferrer">
-            Powered by Modern.js
-          </a>
-        </footer>
-      </div>
-    </Route>
-    <Route path="*">
-      <div>404</div>
-    </Route>
-  </Switch>
+  // <div id="edit">
+  //   <Input placeholder='What needs to be done?'/>
+  // </div>
+<section class="todoapp">
+
+  <div>
+  <header class="header">
+  <h1>todos</h1>
+  <input class="new-todo" placeholder='What needs to be done?'/>
+  </header>
+<body class="learn-bar">
+  <section class="main">
+    <input id="toggle-all" class="toggle-all" type="checkbox"/>
+    <label for="toggle-all">before</label>
+    <ul class="todo-list">
+      <li>
+        <div class="view">
+          <input class="toggle" type="checkbox"></input>
+          <label>1</label>
+          <button></button>
+        </div>
+        <input class="edit" value="3" spellCheck="false"/>
+      </li>
+    </ul>
+  </section>
+
+  </body>
+
+  <footer class="footer">
+    <span class="todo-count">
+      <span>items</span>
+      <span>left</span>
+    </span>
+    <ul class="filters">
+      <li href="#/" class="selected">All</li>
+      <span></span>
+      <li><a href="#/active">Active</a></li>
+      <span></span>
+      <li><a href="#/completed">Completed</a></li>
+    </ul>
+
+  </footer>
+  </div>
+</section>
+
+
+
+
 );
 
 export default App;
